@@ -62,8 +62,8 @@ Copyright 2015. IBK(INDUSTRIAL BANK OF KOREA) All rights reserved.
 
 ## jQuery Plugin
 ### [BXSLIDER](http://bxslider.com)
-### [BXSLIDER OPTIONS](http://bxslider.com/option)
-슬라이드 기능을 제공하는 jQuery 플러그인
+### [BXSLIDER Options](http://bxslider.com/option)
+이미지 슬라이드 기능을 제공하는 jQuery 플러그인
 
 ```js
 $('CSS선택자').bxSlider({
