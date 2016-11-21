@@ -1,0 +1,46 @@
+<ul class="선택자입력">
+  <li><img src="img/slide1.jpg" /></li>
+  <li><img src="img/slide2.jpg" /></li>
+  <li><img src="img/slide3.jpg" /></li>
+  <li><img src="img/slide4.jpg" /></li>
+</ul>
+
+
+// 슬라이드 효과 plugin 활용 (필요한 것만 활용하고 나머지는 지우고 사용 추천)
+// http://bxslider.com/options (더 많은 옵션과 옵션값을 참고하세요!)
+$('선택자입력').bxSlider({
+    mode: 'horizontal', // 슬라이드의 종류
+    speed: 500, // 슬라이드가 움직이는 속도
+    slideMargin: 0, // 각각의 슬라이드 사이의 간격
+    startSlide: 0, // 시작 슬라이드 번호를 정할 수 있습니다
+    randomStart: false, // 시작 슬라이드 번호를 랜덤하게 정할 수 있습니다.
+    easing: null, // 'easing' 타입을 설정
+    captions: false, // 이미지에 타이틀(캡션) 포함 여부
+    responsive: true, // 반응형 슬라이드 유무
+    preloadImages: 'visible', // 보이는 이미지만 로드할 것인지, 미리 전부 로드할 것인지 설정
+    pager: true, // 페이지 번호를 보일 것인지 설정 --------------------------------------------------------------------
+    pagerSelector: '', // 페이지 번호가 들어갈 선택자 입력
+    controls: true, // 이전/다음 버튼 표시 유무------------------------------------------------------------------------
+    prevText: 'Prev', // 이전 버튼의 텍스트
+    nextText: 'Next', // 다음 버튼의 텍스트
+    prevSelector: null, // 이전 버튼이 들어갈 선택자 입력
+    nextSelector: null, // 다음 버튼이 들어갈 선택자 입력
+    autoControls: false, // 시작/정지 버튼 유무(!! auto 옵션이 true 일 때 적용 가능)-----------------------------------
+    startText: 'Start', // 시작 버튼 텍스트
+    stopText: 'Stop', // 정지 버튼 텍스트
+    autoControlsCombine: false, // 시작과 정지 버튼 중 한가지만 보이고 눌렀을 때 토글 기능
+    autoControlsSelector: null, // 시작/정지 버튼이 들어갈 선택자 입력
+    auto: true, // 자동 슬라이드 유무
+    pause: 4000, // 자동 슬라이드 시간
+    autoStart: true, // 처음부터 시작할 것인지, 시작 버튼을 눌렀을 때 시작할 것인지, true = 처음부터 시작
+    autoDirection: 'next', // 자동 슬라이드 방향
+    autoHover: false, // 마우스 오버 이벤트 발생했을 때 자동 슬라이드 정지 여부
+    autoDelay: 0, // 자동 슬라이드 전 대기시간 설정
+    minSlides: 1, // 최소한으로 보여줄 슬라이드 갯수
+    maxSlides: 1, // 최대한으로 보여줄 슬라이드 갯수
+    moveSlides: 0, // 1개 이상의 슬라이드가 보일 때 한번에 움직일 슬라이드의 갯수
+    slideWidth: 0, // 슬라이드의 가로 사이즈(꼭 설정하세요!)------------------------------------------------------------
+    onSliderLoad: function(currentIndex){}, // 슬라이드가 준비되었을 때 실행
+    onSlideBefore: function($slideElement, oldIndex, newIndex){}, // 슬라이드 전환 직전에 실행
+    onSlideAfter: function($slideElement, oldIndex, newIndex){} // 슬라이드 전환 완료 후 실행
+});
