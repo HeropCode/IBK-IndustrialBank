@@ -370,7 +370,7 @@ body {
 }
 .contents .inner {
     width: 940px;
-    height: 401px;
+    height: 400px;
     margin: 0 auto;
     padding-top: 10px;
 }
@@ -546,25 +546,25 @@ body {
 
 /*footer*/
 .footer {
-    height: 149px;
     border-top: 1px solid #d6e0df;
 }
 .footer .inner {
     width: 940px;
     margin: 0 auto;
     padding-top: 25px;
+    padding-bottom: 30px;
     position: relative;
 }
 .footer .link_btn {
     width: 634px;
 }
 .footer .link_btn li {
+    margin-right: 6px;
     font-size: 12px;
-    color: #575757;
     background: url("../img/line_footer.gif") no-repeat left center;
     text-indent: 7px;
     float: left;
-    margin-right: 6px;
+    color: #575757;
     line-height: 21px;
     letter-spacing: -1px;
 }
@@ -604,20 +604,21 @@ body {
     cursor: pointer;
 }
 .footer .ibk_site .body {
-    position: absolute;
-    bottom: 24px;
+    width: 119px;
+    height: 128px;
+    padding: 10px;
     border: 1px solid #bec9ca;
-    padding: 10px 10px;
+    position: absolute;
+    left: 0;
+    bottom: 24px;
     background: white;
     overflow-x: hidden;
     overflow-y: auto;
-    width: 119px;
-    height: 128px;
     font-size: 12px;
+    letter-spacing: -1px;
     display: none;
 }
 .footer .ibk_site .body li {
-    letter-spacing: -1px;
     margin-bottom: 7px;
 }
 .footer .ibk_site .body li:last-child {
