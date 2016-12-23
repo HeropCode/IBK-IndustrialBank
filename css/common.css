@@ -13,7 +13,7 @@ body {
     margin-left: -952px;
 }
 .container img {
-    display: block;
+    vertical-align: top;
 }
 
 
@@ -47,12 +47,9 @@ body {
     position: absolute;
     right: 0;
     bottom: 9px;
-}
-.banner .close_btn input {
-    float: left;
+    font-size: 0;
 }
 .banner .close_btn img {
-    float: left;
     cursor: pointer;
 }
 
@@ -84,30 +81,29 @@ body {
     display: block;
     padding: 5px;
 }
-.header .sub_menu li.search_btn {
+.header .sub_menu li.search {
     position: relative;
     width: 133px;
     height: 23px;
-    margin-top: -1px;
-    margin-right: 2px;
-    margin-left: 5px;
+    margin: -1px 0 0 5px;
 }
-.header .sub_menu li.search_btn input {
+.header .sub_menu li.search input {
     position: absolute;
     top: 0;
     left: 0;
-    width: 119px;
-    height: 19px;
+    width: 133px;
+    height: 23px;
     border: 1px solid #a3c1cf;
     border-radius: 2px;
+    box-sizing: border-box;
     outline: none;
     padding: 1px 6px;
     font-size: 12px;
 }
-.header .sub_menu li.search_btn input:focus {
+.header .sub_menu li.search input:focus {
     border: 1px solid #EC6126;
 }
-.header .sub_menu li.search_btn img {
+.header .sub_menu li.search img {
     position: absolute;
     top: 4px;
     right: 5px;
@@ -131,48 +127,35 @@ body {
     background: url("../img/main_menu1.gif");
     width: 60px;
 }
-.header .main_menu li:nth-child(1) a:hover {
-    background: url("../img/main_menu1_on.gif");
-}
 .header .main_menu li:nth-child(2) a {
     background: url("../img/main_menu2.gif");
     width: 60px;
-}
-.header .main_menu li:nth-child(2) a:hover {
-    background: url("../img/main_menu2_on.gif");
 }
 .header .main_menu li:nth-child(3) a {
     background: url("../img/main_menu3.gif");
     width: 61px;
 }
-.header .main_menu li:nth-child(3) a:hover {
-    background: url("../img/main_menu3_on.gif");
-}
 .header .main_menu li:nth-child(4) a {
     background: url("../img/main_menu4.gif");
     width: 75px;
-}
-.header .main_menu li:nth-child(4) a:hover {
-    background: url("../img/main_menu4_on.gif");
 }
 .header .main_menu li:nth-child(5) a {
     background: url("../img/main_menu5.gif");
     width: 60px;
 }
-.header .main_menu li:nth-child(5) a:hover {
-    background: url("../img/main_menu5_on.gif");
-}
 .header .main_menu li:nth-child(6) a {
     background: url("../img/main_menu6.gif");
     width: 30px;
 }
-.header .main_menu li:nth-child(6) a:hover {
-    background: url("../img/main_menu6_on.gif");
-}
+.header .main_menu li:nth-child(1) a:hover { background: url("../img/main_menu1_on.gif"); }
+.header .main_menu li:nth-child(2) a:hover { background: url("../img/main_menu2_on.gif"); }
+.header .main_menu li:nth-child(3) a:hover { background: url("../img/main_menu3_on.gif"); }
+.header .main_menu li:nth-child(4) a:hover { background: url("../img/main_menu4_on.gif"); }
+.header .main_menu li:nth-child(5) a:hover { background: url("../img/main_menu5_on.gif"); }
+.header .main_menu li:nth-child(6) a:hover { background: url("../img/main_menu6_on.gif"); }
+
 .header .main_menu li.all_btn {
-    margin-top: 2px;
-    margin-right: 0;
-    margin-left: 15px;
+    margin: 2px 0 0 15px;
     cursor: pointer;
 }
 .header .all_menu {
@@ -322,20 +305,20 @@ body {
 }
 .visual .slide_group .slide .prev {
     background: url("../img/visual_slide_controls1.png") no-repeat 0 0;
-    width: 7px;
-    height: 12px;
+    width: 37px;
+    height: 40px;
     position: absolute;
-    bottom: 14px;
-    left: 15px;
+    bottom: 0;
+    left: 0;
     cursor: pointer;
 }
 .visual .slide_group .slide .next {
-    background: url("../img/visual_slide_controls1.png") no-repeat -7px 0;
-    width: 7px;
-    height: 12px;
+    background: url("../img/visual_slide_controls1.png") no-repeat -37px 0;
+    width: 37px;
+    height: 40px;
     position: absolute;
-    bottom: 14px;
-    right: 48px;
+    bottom: 0;
+    right: 35px;
     cursor: pointer;
 }
 .visual .slide_group .slide .pause {
@@ -469,7 +452,7 @@ body {
     margin-top: 3px;
     color: #7c7c7c;
     cursor: pointer;
-    background: url("../img/dot02.gif") no-repeat left center;
+    background: url("../img/dot01.gif") no-repeat left center;
     text-indent: 10px;
 }
 .contents .board .list {
@@ -479,7 +462,7 @@ body {
 .contents .board .list .name {
     float: left;
     font-size: 12px;
-    background: url("../img/dot01.gif") no-repeat left center;
+    background: url("../img/dot02.gif") no-repeat left center;
     text-indent: 9px;
 }
 .contents .board .list .name a {
@@ -596,6 +579,7 @@ body {
 }
 .footer .ibk_site {
     float: left;
+    position: relative;
 }
 .footer .ibk_site:first-child {
     margin-right: 7px;
