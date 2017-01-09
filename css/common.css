@@ -1,22 +1,25 @@
-body {
-    /*height: 2000px;*/
-}
+@charset "UTF-8";
 
 
+/*COMMON*/
 .container {
     font-family: "돋움", dotum, Arial, sans-serif;
 
-    width: 1903px;
     overflow-x: hidden;
     position: relative;
-    left: 50%;
-    margin-left: -952px;
+    margin: 0 auto;
+}
+@media screen and (max-width: 1100px) {
+    .container {
+        width: 1100px;
+    }
 }
 .container img {
     vertical-align: top;
 }
 
 
+/*BANNER*/
 .banner {
     background: #f6ffe4;
     border-bottom: 1px solid #d8ecae;
@@ -54,6 +57,7 @@ body {
 }
 
 
+/*HEADER*/
 .header {
     background: url("../img/line_header.gif") repeat-x bottom center;
     position: relative;
@@ -223,7 +227,7 @@ body {
 }
 
 
-/*visual*/
+/*VISUAL*/
 .visual {
     position: relative;
 }
@@ -344,7 +348,8 @@ body {
     float: left;
 }
 
-/*contents*/
+
+/*CONTENTS*/
 .contents {
 
 }
@@ -524,7 +529,7 @@ body {
 }
 
 
-/*footer*/
+/*FOOTER*/
 .footer {
     border-top: 1px solid #d6e0df;
 }
@@ -532,7 +537,7 @@ body {
     width: 940px;
     margin: 0 auto;
     padding-top: 25px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     position: relative;
 }
 .footer .link_btn {
