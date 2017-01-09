@@ -285,7 +285,7 @@ body {
     margin-right: 5px;
 }
 .visual .slide_group .notice .pager .bx-pager-item a {
-    background: url("../img/visual_slide_controls3.png") no-repeat -16px 0;
+    background: url("../img/controls3.png") no-repeat -9px 0;
     width: 9px;
     height: 9px;
     display: block;
@@ -304,7 +304,7 @@ body {
     position: relative;
 }
 .visual .slide_group .slide .prev {
-    background: url("../img/visual_slide_controls1.png") no-repeat 0 0;
+    background: url("../img/controls1.png") no-repeat 0 0;
     width: 37px;
     height: 40px;
     position: absolute;
@@ -313,7 +313,7 @@ body {
     cursor: pointer;
 }
 .visual .slide_group .slide .next {
-    background: url("../img/visual_slide_controls1.png") no-repeat -37px 0;
+    background: url("../img/controls1.png") no-repeat -37px 0;
     width: 37px;
     height: 40px;
     position: absolute;
@@ -321,8 +321,8 @@ body {
     right: 35px;
     cursor: pointer;
 }
-.visual .slide_group .slide .pause {
-    background: url("../img/visual_slide_controls2.png") no-repeat 0 0;
+.visual .slide_group .slide .toggle {
+    background: url("../img/controls2.png") no-repeat 0 0;
     width: 35px;
     height: 40px;
     position: absolute;
@@ -330,14 +330,11 @@ body {
     right: 0;
     cursor: pointer;
 }
+.visual .slide_group .slide .pause {
+    background-position: 0 0;
+}
 .visual .slide_group .slide .play {
-    background: url("../img/visual_slide_controls2.png") no-repeat 0 -40px;
-    width: 35px;
-    height: 40px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
+    background-position: 0 -40px;
     display: none;
 }
 .visual .slide_group .event {
@@ -385,7 +382,7 @@ body {
 }
 .contents .quick_menu li .icon {
     display: block;
-    background: url("../img/image_sprites1.png") no-repeat;
+    background: url("../img/image_sprites.png") no-repeat;
     width: 33px;
     height: 30px;
     margin: 0 auto;
@@ -495,7 +492,7 @@ body {
     color: #333;
 }
 .contents .bottom_menu li a .icon {
-    background: url("../img/image_sprites1.png") no-repeat;
+    background: url("../img/image_sprites.png") no-repeat;
     width: 13px;
     height: 13px;
     display: block;
