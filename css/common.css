@@ -433,14 +433,14 @@
 .contents .board.notice {
     float: right;
 }
-.contents .board.news .headline {
+.contents .board.news .title {
     background: url("../img/board_title_news.gif");
     width: 49px;
     height: 17px;
     text-indent: -9999px;
     float: left;
 }
-.contents .board.notice .headline {
+.contents .board.notice .title {
     background: url("../img/board_title_notice.gif");
     width: 34px;
     height: 17px;
