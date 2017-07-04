@@ -4,7 +4,6 @@
 /*COMMON*/
 .container {
     font-family: "돋움", dotum, Arial, sans-serif;
-
     overflow-x: hidden;
     position: relative;
     margin: 0 auto;
@@ -30,20 +29,20 @@
     margin: 0 auto;
     position: relative;
 }
-.banner .banner_list li {
+.banner .list li {
     float: left;
     position: relative;
 }
-.banner .banner_list li .read_more {
+.banner .list li .more {
     width: 80px;
     height: 30px;
     position: absolute;
     top: 119px;
 }
-.banner .banner_list li .read_more.rm1 {
+.banner .list li .more1 {
     left: 118px;
 }
-.banner .banner_list li .read_more.rm2 {
+.banner .list li .more2 {
     left: 155px;
 }
 .banner .close_btn {
@@ -251,16 +250,16 @@
     left: 50%;
     margin-left: -150px;
 }
-.visual .certificate_group {
+.visual .banking_group {
     position: absolute;
     top: 60px;
     left: 0;
 }
-.visual .banking_login {
+.visual .banking {
     float: left;
     margin-right: 10px;
 }
-.visual .certificate_center {
+.visual .center {
     float: left;
 }
 .visual .i_one_bank {
@@ -380,11 +379,17 @@
     font-weight: bold;
     color: #055fd7;
 }
+/* Another way..
 .contents .quick_menu li:nth-child(5):hover .text,
 .contents .quick_menu li:nth-child(6):hover .text,
 .contents .quick_menu li:nth-child(7):hover .text {
     color: #309ddb;
 }
+*/
+.contents .quick_menu li:nth-child(n+5):hover .text {
+    color: #309ddb;
+}
+
 .contents .quick_menu li .icon {
     display: block;
     background: url("../img/image_sprites.png") no-repeat;
@@ -392,27 +397,14 @@
     height: 30px;
     margin: 0 auto;
 }
-.contents .quick_menu li:nth-child(1) .icon {
-    background-position: 0 0;
-}
-.contents .quick_menu li:nth-child(2) .icon {
-    background-position: -33px 0;
-}
-.contents .quick_menu li:nth-child(3) .icon {
-    background-position: -66px 0;
-}
-.contents .quick_menu li:nth-child(4) .icon {
-    background-position: -99px 0;
-}
-.contents .quick_menu li:nth-child(5) .icon {
-    background-position: -132px 0;
-}
-.contents .quick_menu li:nth-child(6) .icon {
-    background-position: -165px 0;
-}
-.contents .quick_menu li:nth-child(7) .icon {
-    background-position: -198px 0;
-}
+.contents .quick_menu li:nth-child(1) .icon { background-position: 0 0; }
+.contents .quick_menu li:nth-child(2) .icon { background-position: -33px 0; }
+.contents .quick_menu li:nth-child(3) .icon { background-position: -66px 0; }
+.contents .quick_menu li:nth-child(4) .icon { background-position: -99px 0; }
+.contents .quick_menu li:nth-child(5) .icon { background-position: -132px 0; }
+.contents .quick_menu li:nth-child(6) .icon { background-position: -165px 0; }
+.contents .quick_menu li:nth-child(7) .icon { background-position: -198px 0; }
+
 .contents .quick_menu li .text {
     display: block;
     font-size: 12px;
@@ -433,21 +425,21 @@
 .contents .board.notice {
     float: right;
 }
-.contents .board.news .title {
+.contents .board.news h1 {
     background: url("../img/board_title_news.gif");
     width: 49px;
     height: 17px;
     text-indent: -9999px;
     float: left;
 }
-.contents .board.notice .title {
+.contents .board.notice h1 {
     background: url("../img/board_title_notice.gif");
     width: 34px;
     height: 17px;
     text-indent: -9999px;
     float: left;
 }
-.contents .board .more_btn {
+.contents .board .more {
     display: block;
     float: right;
     font-size: 11px;
@@ -503,30 +495,14 @@
     display: block;
     position: absolute;
 }
-.contents .bottom_menu li:nth-child(1) a .icon {
-    background-position: 0 -30px;
-}
-.contents .bottom_menu li:nth-child(2) a .icon {
-    background-position: -13px -30px;
-}
-.contents .bottom_menu li:nth-child(3) a .icon {
-    background-position: -26px -30px;
-}
-.contents .bottom_menu li:nth-child(4) a .icon {
-    background-position: -39px -30px;
-}
-.contents .bottom_menu li:nth-child(5) a .icon {
-    background-position: -52px -30px;
-}
-.contents .bottom_menu li:nth-child(6) a .icon {
-    background-position: -65px -30px;
-}
-.contents .bottom_menu li:nth-child(7) a .icon {
-    background-position: -78px -30px;
-}
-.contents .bottom_menu li:nth-child(8) a .icon {
-    background-position: -91px -30px;
-}
+.contents .bottom_menu li:nth-child(1) a .icon { background-position: 0 -30px; }
+.contents .bottom_menu li:nth-child(2) a .icon { background-position: -13px -30px; }
+.contents .bottom_menu li:nth-child(3) a .icon { background-position: -26px -30px; }
+.contents .bottom_menu li:nth-child(4) a .icon { background-position: -39px -30px; }
+.contents .bottom_menu li:nth-child(5) a .icon { background-position: -52px -30px; }
+.contents .bottom_menu li:nth-child(6) a .icon { background-position: -65px -30px; }
+.contents .bottom_menu li:nth-child(7) a .icon { background-position: -78px -30px; }
+.contents .bottom_menu li:nth-child(8) a .icon { background-position: -91px -30px; }
 
 
 /*FOOTER*/
@@ -616,19 +592,19 @@
 .footer .ibk_site .body li a::before {
     content: "- ";
 }
-.footer .sns_btn {
+.footer .sns {
     position: absolute;
     top: 61px;
     right: 147px;
 }
-.footer .sns_btn li {
+.footer .sns li {
     float: left;
     margin-right: 5px;
 }
-.footer .sns_btn li:last-child {
+.footer .sns li:last-child {
     margin-right: 0;
 }
-.footer .sns_btn li img {
+.footer .sns li img {
     width: 24px;
 }
 .footer .access_mark {
