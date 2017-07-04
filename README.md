@@ -1,4 +1,4 @@
-[보기](https://heropcode.github.io/IBK-IndustrialBank/)
+[기업은행 예제](https://heropcode.github.io/IBK-IndustrialBank/)
 
 # IBK 기업은행
 메인 페이지 HTML, CSS, JavaScript 코드
