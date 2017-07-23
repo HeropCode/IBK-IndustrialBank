@@ -20,8 +20,8 @@
 
 /*BANNER*/
 .banner {
-    background: #f6ffe4;
-    border-bottom: 1px solid #d8ecae;
+    background: #F6FFE4;
+    border-bottom: 1px solid #D8ECAE;
     display: none;
 }
 .banner .inner {
@@ -198,7 +198,7 @@
     border-right: none;
 }
 .header .all_menu .menu > li > h1 {
-    color: #055fd7;
+    color: #055FD7;
     font-weight: bold;
 }
 .header .all_menu .menu > li > h1.second {
@@ -246,8 +246,9 @@
 }
 .visual .headline {
     position: absolute;
-    top: 240px;
+    top: 50%;
     left: 50%;
+    margin-top: -55px;
     margin-left: -150px;
 }
 .visual .banking_group {
@@ -297,7 +298,6 @@
 .visual .slide_group .notice .pager .bx-pager-item a.active {
     background-position: 0 0;
 }
-
 .visual .slide_group .slide {
     background: url("../img/visual_slider_bg_slide.png");
     width: 560px;
@@ -324,7 +324,8 @@
     right: 35px;
     cursor: pointer;
 }
-.visual .slide_group .slide .toggle {
+.visual .slide_group .slide .pause,
+.visual .slide_group .slide .play {
     background: url("../img/controls2.png") no-repeat 0 0;
     width: 35px;
     height: 40px;
@@ -360,12 +361,13 @@
 }
 .contents .quick_menu {
     background: #ebf0f4;
-    border: 1px solid #dce3e9;
+    border: 1px solid #DCE3E9;
     padding: 17px 0;
+    margin-bottom: 10px;
 }
 .contents .quick_menu li {
     width: 130px;
-    border-right: 1px solid #d0d9e1;
+    border-right: 1px solid #DCE3E9;
     float: left;
 }
 .contents .quick_menu li:first-child {
@@ -375,10 +377,6 @@
     width: 140px;
     border-right: none;
 }
-.contents .quick_menu li:hover .text {
-    font-weight: bold;
-    color: #055fd7;
-}
 /* Another way..
 .contents .quick_menu li:nth-child(5):hover .text,
 .contents .quick_menu li:nth-child(6):hover .text,
@@ -386,10 +384,6 @@
     color: #309ddb;
 }
 */
-.contents .quick_menu li:nth-child(n+5):hover .text {
-    color: #309ddb;
-}
-
 .contents .quick_menu li .icon {
     display: block;
     background: url("../img/image_sprites.png") no-repeat;
@@ -412,12 +406,19 @@
     text-align: center;
     margin-top: 8px;
 }
+.contents .quick_menu li:hover .text {
+    font-weight: bold;
+    color: #055FD7;
+}
+.contents .quick_menu li:nth-child(n+5):hover .text {
+    color: #309DDB;
+}
 
 .contents .board {
-    width: 413px;
-    border: 1px solid #dce3e9;
+    width: 465px;
     padding: 25px;
-    margin-top: 10px;
+    border: 1px solid #dce3e9;
+    box-sizing: border-box;
 }
 .contents .board.news {
     float: left;
@@ -440,11 +441,10 @@
     float: left;
 }
 .contents .board .more {
-    display: block;
     float: right;
     font-size: 11px;
     margin-top: 3px;
-    color: #7c7c7c;
+    color: #7C7C7C;
     cursor: pointer;
     background: url("../img/dot01.gif") no-repeat left center;
     text-indent: 10px;
@@ -456,8 +456,18 @@
 .contents .board .list .name {
     float: left;
     font-size: 12px;
-    background: url("../img/dot02.gif") no-repeat left center;
+    position: relative;
+    /*background: url("../img/dot02.gif") no-repeat left center;*/
     text-indent: 9px;
+}
+.contents .board .list .name::before {
+    content: "";
+    background: url("../img/dot02.gif");
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    top: 10px;
+    left: 0;
 }
 .contents .board .list .name a {
     color: #575757;
@@ -468,16 +478,14 @@
 .contents .board .list .date {
     float: right;
     font-size: 11px;
-    color: #807c7c;
+    color: #807C7C;
 }
 .contents .bottom_menu {
-    border: 1px solid #dce3e9;
-    padding: 16px 19px;
+    border: 1px solid #DCE3E9;
     margin-top: 10px;
+    padding: 16px 19px;
 }
 .contents .bottom_menu li {
-    text-indent: 17px;
-    font-size: 12px;
     float: left;
     margin-right: 31px;
 }
@@ -485,11 +493,16 @@
     margin-right: 0;
 }
 .contents .bottom_menu li a {
-    display: block;
     color: #333;
+    font-size: 12px;
+    text-indent: 17px;
+    display: block;
+}
+.contents .bottom_menu li a:hover {
+    color: #309DDB;
 }
 .contents .bottom_menu li a .icon {
-    background: url("../img/image_sprites.png") no-repeat;
+    background: url("../img/image_sprites.png");
     width: 13px;
     height: 13px;
     display: block;
@@ -540,7 +553,7 @@
     font-weight: bold;
 }
 .footer .link_btn li a.color {
-    color: #2c5d88;
+    color: #055FD7;
 }
 .footer .link_btn li span.num {
     letter-spacing: 0;
@@ -560,16 +573,37 @@
     position: relative;
 }
 .footer .ibk_site:first-child {
-    margin-right: 7px;
+    margin-right: 8px;
 }
 .footer .ibk_site .head {
+    width: 140px;
+    height: 24px;
+    padding: 6px 10px;
+    border: 1px solid #bec9ca;
+    box-sizing: border-box;
+    font-size: 12px;
+    color: #807C7C;
     cursor: pointer;
+    position: relative;
+}
+.footer .ibk_site .head::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #807C7C transparent transparent transparent;
+    position: absolute;
+    top: 9px;
+    right: 12px;
 }
 .footer .ibk_site .body {
-    width: 119px;
-    height: 128px;
+    width: 140px;
+    height: 150px;
     padding: 10px;
     border: 1px solid #bec9ca;
+    border-bottom: none;
+    box-sizing: border-box;
     position: absolute;
     left: 0;
     bottom: 24px;
@@ -594,8 +628,8 @@
 }
 .footer .sns {
     position: absolute;
-    top: 61px;
-    right: 147px;
+    top: 62px;
+    right: 148px;
 }
 .footer .sns li {
     float: left;
