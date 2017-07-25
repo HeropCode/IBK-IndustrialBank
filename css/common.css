@@ -590,9 +590,9 @@
     content: "";
     width: 0;
     height: 0;
-    border-width: 5px 5px 0 5px;
+    border-width: 0 5px 5px 5px;
     border-style: solid;
-    border-color: #807C7C transparent transparent transparent;
+    border-color: transparent transparent #807C7C transparent;
     position: absolute;
     top: 9px;
     right: 12px;
@@ -607,7 +607,7 @@
     position: absolute;
     left: 0;
     bottom: 24px;
-    background: white;
+    background: #FFF;
     overflow-x: hidden;
     overflow-y: auto;
     font-size: 12px;
