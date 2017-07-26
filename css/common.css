@@ -163,45 +163,39 @@
 }
 .header .all_menu {
     width: 100%;
-    height: 394px;
     background: #f6f9fe;
     border-bottom: 3px solid #85a0bb;
     position: absolute;
     top: 84px;
+    left: 0;
     z-index: 101;
     display: none;
 }
 .header .all_menu .inner {
     width: 940px;
     margin: 0 auto;
+    padding: 60px 0;
     position: relative;
 }
 .header .all_menu .menu {
     width: 1000px;
-    position: absolute;
-    top: 60px;
-    left: 0;
 }
 .header .all_menu .menu > li {
     float: left;
     width: 124px;
     height: 280px;
-    border-right: 1px solid #e1e4eb;
+    border-left: 1px solid #e1e4eb;
     padding-left: 14px;
 }
 .header .all_menu .menu > li:first-child {
-    width: 120px;
     padding-left: 0;
-}
-.header .all_menu .menu > li:last-child {
-    width: 110px;
-    border-right: none;
+    border-left: none;
 }
 .header .all_menu .menu > li > h1 {
     color: #055FD7;
     font-weight: bold;
 }
-.header .all_menu .menu > li > h1.second {
+.header .all_menu .menu > li > h1:nth-of-type(2) {
     margin-top: 20px;
 }
 .header .all_menu .menu > li > ul > li {
@@ -216,11 +210,8 @@
     color: #EC6126;
 }
 .header .all_menu .close_btn {
-    background: url("../img/close_btn_all_menu.jpg");
-    width: 55px;
-    height: 17px;
     position: absolute;
-    top: 14px;
+    top: 16px;
     right: 0;
     cursor: pointer;
 }
@@ -450,8 +441,13 @@
     text-indent: 10px;
 }
 .contents .board .list {
-    line-height: 22px;
-    margin-top: 10px;
+    margin-top: 20px;
+}
+.contents .board .list li {
+    margin-bottom: 12px
+}
+.contents .board .list li:last-child {
+    margin-bottom: 0;
 }
 .contents .board .list .name {
     float: left;
@@ -533,18 +529,25 @@
     width: 634px;
 }
 .footer .link_btn li {
-    margin-right: 6px;
-    font-size: 12px;
-    background: url("../img/line_footer.gif") no-repeat left center;
-    text-indent: 7px;
     float: left;
+    margin-right: 12px;
+    font-size: 12px;
     color: #575757;
-    line-height: 21px;
+    line-height: 22px;
     letter-spacing: -1px;
+    position: relative;
 }
-.footer .link_btn li.first {
-    background: none;
-    text-indent: 0;
+.footer .link_btn li::before {
+    content: "";
+    background: url("../img/line_footer.gif") no-repeat left center;
+    width: 1px;
+    height: 9px;
+    position: absolute;
+    left: -6px;
+    top: 6px;
+}
+.footer .link_btn li.first::before {
+    display: none;
 }
 .footer .link_btn li a {
     color: #575757;
